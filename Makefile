@@ -56,7 +56,7 @@ clean:
 	@printf "$(_INFO) object files deleted.\n"
 
 fclean: clean
-	@ $(MAKE) fclean -C $(LIB_D) ; $(MAKE) fclean -C
+	@ $(MAKE) fclean -C $(LIB_D) ;
 	@ $(RM) $(CLIENT) $(SERVER)
 	@printf "$(_INFO) client removed.\n"
 	@printf "$(_INFO) server removed.\n"

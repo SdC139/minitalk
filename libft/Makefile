@@ -6,13 +6,13 @@
 #    By: sde-carl <sde-carl@student.42roma.it >     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/06 18:15:04 by sde-carl          #+#    #+#              #
-#    Updated: 2023/06/14 16:21:47 by sde-carl         ###   ########.fr        #
+#    Updated: 2023/06/14 16:33:05 by sde-carl         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-SRCS_DIR := /libft/
+SRCS_DIR := ../libft/
 
 SRCS := ft_isdigit.c ft_memset.c ft_strjoin.c ft_strjoin2.c ft_strtrim.c \ 
 ft_isprint.c ft_putchar_fd.c ft_strlcat.c ft_substr.c ft_atoi.c \ 
@@ -38,7 +38,7 @@ RM = rm -f
 FLAGS = -Wall -Wextra -Werror
 
 .c.o:
-	${CC} ${FLAGS} -g -c $< -o $@
+	@${CC} ${FLAGS} -g -c $< -o $@
 
 $(NAME): $(OBJS)
 	@ar rcs ${NAME} ${OBJS}

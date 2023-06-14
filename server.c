@@ -24,6 +24,7 @@ void	ft_display_banner(void)
 	██  ██  %s\n", ORANGE, END);
 	ft_printf("\t%s██      ██ ██ ██   ████ ██        ██    ██   ██ ███████\
 	██   ██ %s\n", ORANGE, END);
+	ft_printf("%s", END);
 }
 
 void	ft_handler(int signal, siginfo_t *info, void *unused)
