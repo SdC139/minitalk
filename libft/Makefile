@@ -6,7 +6,7 @@
 #    By: sde-carl <sde-carl@student.42roma.it >     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/06 18:15:04 by sde-carl          #+#    #+#              #
-#    Updated: 2023/05/29 02:52:39 by sde-carl         ###   ########.fr        #
+#    Updated: 2023/06/14 15:29:31 by sde-carl         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,18 +41,18 @@ FLAGS = -Wall -Wextra -Werror
 	${CC} ${FLAGS} -g -c $< -o $@
 
 $(NAME): $(OBJS)
-	ar rcs ${NAME} ${OBJS}
+	@ar rcs ${NAME} ${OBJS}
 
 all: $(NAME)
 
 bonus : ${OBJ_BONUS}
-	ar rcs ${NAME} ${OBJ_BONUS}
+	@ar rcs ${NAME} ${OBJ_BONUS}
 
 clean:
-	${RM} ${OBJS} ${OBJ_BONUS}
+	@${RM} ${OBJS} ${OBJ_BONUS}
 
 fclean: clean
-	${RM} ${NAME}
+	@${RM} ${NAME}
 
 re: fclean all
 

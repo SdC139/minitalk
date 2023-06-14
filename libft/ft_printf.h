@@ -18,8 +18,8 @@
 # include <stdlib.h>
 # include <string.h>
 
-int	ft_allcases(va_list args, const char c);
-int	ft_printf(const char *str, ...);
+int	ft_all_cases(va_list args, const char c);
+int	ft_printf(const char *format, ...);
 int	ft_putchar(char c);
 int	ft_puthexa(unsigned long nbr, char *hexa);
 int	ft_putnbr(int nbr);

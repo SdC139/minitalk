@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-int	ft_allcases(va_list args, const char c)
+int	ft_all_cases(va_list args, const char c)
 {
 	int	length;
 
