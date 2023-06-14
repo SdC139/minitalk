@@ -50,7 +50,7 @@ int	ft_printf(const char *format, ...)
 		if (format[index] == '%')
 		{
 			index++;
-			length += ft_allcases(args, format[index]);
+			length += ft_all_cases(args, format[index]);
 		}
 		else
 			length += ft_putchar(format[index]);
