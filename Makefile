@@ -51,12 +51,12 @@ $(LIBFT):
 	@printf "$(_SUCCESS) libft compiled.\n"
 
 clean:
-	@ $(MAKE) clean -C $(LIB_D); $(MAKE) clean -C
+	@ $(MAKE) clean -C $(LIB_D)
 	@ $(RM) $(OBJ_C) $(OBJ_S)
 	@printf "$(_INFO) object files deleted.\n"
 
 fclean: clean
-	@ $(MAKE) fclean -C $(LIB_D) ;
+	@ $(MAKE) fclean -C $(LIB_D)
 	@ $(RM) $(CLIENT) $(SERVER)
 	@printf "$(_INFO) client removed.\n"
 	@printf "$(_INFO) server removed.\n"
