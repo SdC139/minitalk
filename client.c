@@ -12,7 +12,7 @@
 
 #include "minitalk.h"
 
-static void	ft_send(int sig)
+void	ft_send(int sig)
 {
 	if (sig == SIGUSR1)
 	{
@@ -21,7 +21,7 @@ static void	ft_send(int sig)
 	}
 }
 
-void	ft_byte(int pid, char c)
+void	ft_bit(int pid, char c)
 {
 	int	i;
 
@@ -36,10 +36,10 @@ void	ft_byte(int pid, char c)
 	}
 }
 
-void	ft_bit(int pid, char *msg)
+void	ft_byte(int pid, char *msg)
 {
 	while (*msg)
-		ft_byte(pid, *msg++);
+		ft_bit(pid, *msg++);
 }
 
 int	main(int ac, char **av)
@@ -60,8 +60,8 @@ int	main(int ac, char **av)
 		exit(EXIT_FAILURE);
 	}
 	signal(SIGUSR1, &ft_send);
-	ft_bit(pid, str++);
-	ft_byte(pid, '\n');
-	ft_byte(pid, '\0');
+	ft_byte(pid, str++);
+	ft_bit(pid, '\n');
+	ft_bit(pid, '\0');
 	return (0);
 }
